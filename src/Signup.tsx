@@ -1,11 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from './UserContext';
+import React, { useState } from 'react';
+//import { UserContext } from './UserContext';
 import './App.css';
 
 const Signup = () => {
     const initialState = { username: '', password: '', confirmPassword: '' };
     const [form, setForm] = useState(initialState);
-    const { saveUser } = useContext(UserContext);
+    //const { saveUser } = useContext(UserContext);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
