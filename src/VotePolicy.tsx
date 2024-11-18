@@ -10,7 +10,7 @@ function VotePolicy({ policy, voter }: VotePolicyProps) {
         if (user.id) {
             try {
                 console.log(user.id);
-                const response = await fetch(`http://localhost:3000/policies/vote/${policy.id}`, {
+                const response = await fetch(`https://cs472backend.onrender.com/policies/vote/${policy.id}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
